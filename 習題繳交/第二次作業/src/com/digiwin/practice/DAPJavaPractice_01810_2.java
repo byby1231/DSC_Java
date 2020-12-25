@@ -1,14 +1,16 @@
 package com.digiwin.practice;
 
+import com.digiwin.practice.service.SalesService;
 import com.digiwin.practice.ui.DisplayUI;
 
+import java.util.Date;
 import java.util.Scanner;
 
 public class DAPJavaPractice_01810_2 {
     public static void main(String[] args) {
 
         DisplayUI MyUI = new DisplayUI();
-
+        MyUI.ShowWelcomeMessage();
         /*System.out.println("***** DAP Java 練習題二 *****");
         System.out.println("==========================");
         System.out.println("銷 售 紀 錄 管 理 系 統");
@@ -22,25 +24,23 @@ public class DAPJavaPractice_01810_2 {
         System.out.println("9.退 出");
         System.out.println("==========================");*/
         Scanner scanner = new Scanner(System.in);
+        SalesService salesService = new SalesService();
+
         int i = 1;
         while(i == 1){
             while (!scanner.hasNextInt()) {
                 System.out.println(" ***[ERROR]輸入錯誤，只能為:[1, 2, 3, 4, 9]***");
                 scanner.nextLine();
             }
-            int Ordertype = scanner.nextInt();
-            switch(Ordertype) {
+            int condition = scanner.nextInt();
+            switch(condition) {
                 case 1:
-                    System.out.println("1.順序類型=升冪-1");
-
-                    System.out.println("--------------------");
-                    System.out.print(">>> 請輸入執行類型>");
+                    salesService.ShowList();
+                    MyUI.ShowWelcomeMessage();
                     break;
                 case 2:
-                    System.out.println("2.順序類型=降冪-2");
-
-                    System.out.println("--------------------");
-                    System.out.print(">>> 請輸入執行類型>");
+                    salesService.InsertRecord("Casper",new Date(),44);
+                    MyUI.ShowWelcomeMessage();
                     break;
                 case 3:
                     System.out.println("3.順序類型=反轉-3");
@@ -51,8 +51,8 @@ public class DAPJavaPractice_01810_2 {
                 case 4:
                     System.out.println("3.順序類型=反轉-3");
 
-                    System.out.println("--------------------");
-                    System.out.print(">>> 請輸入執行類型>");
+//                    System.out.println("--------------------");
+//                    System.out.print(">>> 請輸入執行類型>");
                     break;
                 case 9:
                     break;
@@ -61,7 +61,7 @@ public class DAPJavaPractice_01810_2 {
                     System.out.println("--------------------");
                     System.out.print(">>> 請輸入執行類型>");
             }
-            if (Ordertype == 9)   //退出
+            if (condition == 9)   //退出
             {
                 System.out.println("退出系統。");
                 System.out.println("=========================");

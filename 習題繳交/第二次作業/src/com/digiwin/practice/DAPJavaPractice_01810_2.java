@@ -33,6 +33,7 @@ public class DAPJavaPractice_01810_2 {
                 scanner.nextLine();
             }
             int condition = scanner.nextInt();
+            scanner.nextLine();        //怪東西
             switch(condition) {
                 case 1:
                     salesService.ShowList();
@@ -43,16 +44,12 @@ public class DAPJavaPractice_01810_2 {
                     MyUI.ShowWelcomeMessage();
                     break;
                 case 3:
-                    System.out.println("3.順序類型=反轉-3");
-
-                    System.out.println("--------------------");
-                    System.out.print(">>> 請輸入執行類型>");
+                    salesService.EditList();
+                    MyUI.ShowWelcomeMessage();
                     break;
                 case 4:
-                    System.out.println("3.順序類型=反轉-3");
-
-//                    System.out.println("--------------------");
-//                    System.out.print(">>> 請輸入執行類型>");
+                    salesService.DeleteListById();
+                    MyUI.ShowWelcomeMessage();
                     break;
                 case 9:
                     break;

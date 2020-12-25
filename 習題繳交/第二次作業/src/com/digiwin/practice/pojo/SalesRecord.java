@@ -2,7 +2,6 @@ package com.digiwin.practice.pojo;
 
 
 import java.text.SimpleDateFormat;
-import java.util.Comparator;
 import java.util.Date;
 
 
@@ -27,6 +26,11 @@ public class SalesRecord {
 
     public Date getDate() {
         return date;
+    }
+
+    public  String getFormatDate(){
+        SimpleDateFormat Format = new SimpleDateFormat("yyyy-MM-dd");
+        return Format.format(this.date);
     }
 
     public void setDate(Date date) {

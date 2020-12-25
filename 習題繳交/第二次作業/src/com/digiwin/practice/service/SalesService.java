@@ -33,9 +33,7 @@ public class SalesService{
                 break;
             }
         }
-//        System.out.println("Length"+Salelist.size());
-//        Salelist.remove(2);
-//        System.out.println("Length"+Salelist.size());
+
     }
 
     public void ShowList(){
@@ -63,7 +61,6 @@ public class SalesService{
                 for (int i = 0; i < tempSalelist.size(); i++) {
                     System.out.println(tempSalelist.get(i));
                 }
-                ;
             }
             if (!displayUI.AskContinue("是否要繼續(Y/N)?")){
                 break;
@@ -71,5 +68,13 @@ public class SalesService{
         }
 
 
+    }
+
+    public void EditList(){
+        displayUI.ShowEditMessage(Salelist);
+    }
+
+    public void DeleteListById(){
+        displayUI.ShowDeleteMessage(Salelist);
     }
 }

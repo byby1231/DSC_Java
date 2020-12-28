@@ -6,6 +6,12 @@ import java.util.Date;
 
 
 
+/**
+ * 銷售紀錄
+ * @author 張柏宏
+ *
+ */
+
 public class SalesRecord {
 
     private String id;

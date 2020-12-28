@@ -166,7 +166,7 @@ public class DisplayUI {
                 continue;
             } else {
                 SalesRecord TempsaleRecord;
-                TempsaleRecord = xList.get(FindId);
+                TempsaleRecord = xList.get(mResult);
                 System.out.println("--------------------------");
                 System.out.println(String.format("刪 除 單 號: %s",String.format("%02d", FindId)));
                 System.out.println("日期    數量");

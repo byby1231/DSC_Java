@@ -6,6 +6,11 @@ import com.digiwin.practice.ui.DisplayUI;
 import java.util.Date;
 import java.util.Scanner;
 
+/**
+ * 練習題一
+ * @author 張柏宏
+ */
+
 public class DAPJavaPractice_01810_2 {
     public static void main(String[] args) {
 
